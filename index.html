@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Tourism - Explore the Beauty of India</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       1. HEADER & 2. NAVIGATION BAR
+       ========================================================= -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      
+      <!-- 1. Header Logo & Website Name -->
+      <a href="#home" class="logo">
+        <!-- Ashoka Chakra / Sun inspired SVG logo icon -->
+        <svg class="logo-icon" viewBox="0 0 100 100" width="36" height="36" aria-hidden="true">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#FF9933" stroke-width="4"/>
+          <circle cx="50" cy="50" r="14" fill="#000080"/>
+          <!-- Chakra Rays -->
+          <g stroke="#000080" stroke-width="2.5">
+            <line x1="50" y1="5" x2="50" y2="95"/>
+            <line x1="5" y1="50" x2="95" y2="50"/>
+            <line x1="18.18" y1="18.18" x2="81.82" y2="81.82"/>
+            <line x1="18.18" y1="81.82" x2="81.82" y2="18.18"/>
+            <line x1="28.79" y1="9.55" x2="71.21" y2="90.45"/>
+            <line x1="9.55" y1="28.79" x2="90.45" y2="71.21"/>
+            <line x1="9.55" y1="71.21" x2="90.45" y2="28.79"/>
+            <line x1="28.79" y1="90.45" x2="71.21" y2="9.55"/>
+          </g>
+          <circle cx="50" cy="50" r="6" fill="#FFFFFF"/>
+        </svg>
+        <span class="logo-text">India <span class="highlight">Tourism</span></span>
+      </a>
+
+      <!-- Mobile Navigation Hamburger Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- 2. Navigation Bar Links -->
+      <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#booking" class="nav-link">Book Now</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- =========================================================
+       3. MAIN SECTION (Hero Banner)
+       ========================================================= -->
+  <main>
+    <section class="hero-section" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Incredible India</span>
+        <h1 class="hero-title">Explore the Beauty of India</h1>
+        <p class="hero-subtitle">Find your perfect destination</p>
+        <div class="hero-buttons">
+          <a href="#destinations" class="btn btn-primary">Discover Places</a>
+          <a href="#booking" class="btn btn-secondary">Plan Your Trip</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. TOURIST DESTINATIONS SECTION
+         ========================================================= -->
+    <section class="section destinations-section" id="destinations">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Popular Picks</span>
+          <h2 class="section-title">Top Tourist Destinations</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">Experience the iconic wonders, timeless monuments, and diverse landscapes of India.</p>
+        </div>
+
+        <div class="cards-grid destinations-grid">
+          
+          <!-- Card 1: Taj Mahal -->
+          <article class="card destination-card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" 
+                   alt="Taj Mahal in Agra bathed in golden morning light" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-badge">Agra, UP</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Taj Mahal</h3>
+              <p class="card-text">
+                One of the Seven Wonders of the World, an awe-inspiring white marble mausoleum symbolizing eternal love on the banks of Yamuna River.
+              </p>
+              <a href="#booking" class="card-link" onclick="selectDestination('Taj Mahal')">Book This &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 2: Kerala Backwaters -->
+          <article class="card destination-card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80" 
+                   alt="Traditional houseboat cruising the serene Kerala backwaters in Alleppey" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-badge">Alleppey, Kerala</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Kerala Backwaters</h3>
+              <p class="card-text">
+                Known as God's Own Country, glide along tranquil palm-fringed canals, serene lagoons, and lush green backwaters on a traditional houseboat.
+              </p>
+              <a href="#booking" class="card-link" onclick="selectDestination('Kerala Backwaters')">Book This &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Rajasthan -->
+          <article class="card destination-card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" 
+                   alt="Majestic Amber Fort and palace architecture in Rajasthan" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-badge">Jaipur, Rajasthan</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Rajasthan</h3>
+              <p class="card-text">
+                The land of maharajas and vibrant colors, boasting majestic desert forts, royal palaces, camel safaris, and rich folk heritage.
+              </p>
+              <a href="#booking" class="card-link" onclick="selectDestination('Rajasthan')">Book This &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 4: Goa -->
+          <article class="card destination-card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80" 
+                   alt="Sun-kissed palm trees and tropical golden sand beach in Goa" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="card-badge">Goa Coast</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Goa</h3>
+              <p class="card-text">
+                India's coastal paradise famous for sun-kissed golden beaches, thrilling water sports, Portuguese colonial charm, and lively sunsets.
+              </p>
+              <a href="#booking" class="card-link" onclick="selectDestination('Goa')">Book This &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. CATEGORIES SECTION
+         ========================================================= -->
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Travel Styles</span>
+          <h2 class="section-title">Explore by Category</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">Choose from a variety of holiday styles tailored to your taste and passion.</p>
+        </div>
+
+        <div class="cards-grid categories-grid">
+          
+          <!-- Category 1: Hill Stations -->
+          <div class="category-card">
+            <div class="category-icon-wrap">
+              <span class="category-icon" role="img" aria-label="Hill Stations">🏔️</span>
+            </div>
+            <h3 class="category-title">Hill Stations</h3>
+            <p class="category-desc">Misty mountains, pine valleys, and refreshing weather in Shimla, Manali, Ooty, and Darjeeling.</p>
+          </div>
+
+          <!-- Category 2: Beaches -->
+          <div class="category-card">
+            <div class="category-icon-wrap">
+              <span class="category-icon" role="img" aria-label="Beaches">🏖️</span>
+            </div>
+            <h3 class="category-title">Beaches</h3>
+            <p class="category-desc">Tropical coastlines, warm waves, and golden shores across Goa, Kerala, Andaman, and Gokarna.</p>
+          </div>
+
+          <!-- Category 3: Historical Places -->
+          <div class="category-card">
+            <div class="category-icon-wrap">
+              <span class="category-icon" role="img" aria-label="Historical Places">🏛️</span>
+            </div>
+            <h3 class="category-title">Historical Places</h3>
+            <p class="category-desc">Ancient temples, Mughal monuments, and timeless UNESCO World Heritage sites throughout India.</p>
+          </div>
+
+          <!-- Category 4: Adventure Tourism -->
+          <div class="category-card">
+            <div class="category-icon-wrap">
+              <span class="category-icon" role="img" aria-label="Adventure Tourism">🧗‍♂️</span>
+            </div>
+            <h3 class="category-title">Adventure Tourism</h3>
+            <p class="category-desc">Trekking, white-water river rafting, paragliding, and desert safaris in Ladakh and Rishikesh.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. TOUR PACKAGES SECTION
+         ========================================================= -->
+    <section class="section packages-section" id="packages">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curated Vacations</span>
+          <h2 class="section-title">Popular Tour Packages</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">All-inclusive guided itineraries designed for families, couples, and solo explorers.</p>
+        </div>
+
+        <div class="cards-grid packages-grid">
+          
+          <!-- Package 1: Golden Triangle -->
+          <article class="card package-card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80" 
+                   alt="Delhi India Gate monument" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="package-duration-badge">6 Days / 5 Nights</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Golden Triangle Tour</h3>
+              <ul class="package-details-list">
+                <li><strong>Destination:</strong> Delhi, Agra &amp; Jaipur</li>
+                <li><strong>Duration:</strong> 6 Days / 5 Nights</li>
+                <li><strong>Includes:</strong> 4-Star Hotel, Cab &amp; Guided Tours</li>
+              </ul>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-label">Starting at</span>
+                  <span class="price-value">&#8377;18,999</span>
+                  <span class="price-sub">/ person</span>
+                </div>
+                <a href="#booking" class="btn btn-outline" onclick="selectDestination('Rajasthan', 'Golden Triangle Tour')">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 2: Kerala Serenity -->
+          <article class="card package-card featured-package">
+            <div class="popular-ribbon">Most Popular</div>
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80" 
+                   alt="Lush tea gardens and backwaters of Kerala" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="package-duration-badge">5 Days / 4 Nights</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Kerala Bliss Holiday</h3>
+              <ul class="package-details-list">
+                <li><strong>Destination:</strong> Munnar, Alleppey &amp; Kochi</li>
+                <li><strong>Duration:</strong> 5 Days / 4 Nights</li>
+                <li><strong>Includes:</strong> Houseboat Stay, Meals &amp; Sightseeing</li>
+              </ul>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-label">Starting at</span>
+                  <span class="price-value">&#8377;15,499</span>
+                  <span class="price-sub">/ person</span>
+                </div>
+                <a href="#booking" class="btn btn-primary" onclick="selectDestination('Kerala Backwaters', 'Kerala Bliss Holiday')">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 3: Himalayan Odyssey -->
+          <article class="card package-card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80" 
+                   alt="Snow covered peaks and pine forests of Himachal Pradesh" 
+                   class="card-img" 
+                   loading="lazy">
+              <span class="package-duration-badge">7 Days / 6 Nights</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Himalayan Escape</h3>
+              <ul class="package-details-list">
+                <li><strong>Destination:</strong> Shimla, Kullu &amp; Manali</li>
+                <li><strong>Duration:</strong> 7 Days / 6 Nights</li>
+                <li><strong>Includes:</strong> Resort Stay, Rohtang Pass &amp; Bonfire</li>
+              </ul>
+              <div class="package-footer">
+                <div class="package-price">
+                  <span class="price-label">Starting at</span>
+                  <span class="price-value">&#8377;21,999</span>
+                  <span class="price-sub">/ person</span>
+                </div>
+                <a href="#booking" class="btn btn-outline" onclick="selectDestination('Hill Stations', 'Himalayan Escape')">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. BOOKING SECTION
+         ========================================================= -->
+    <section class="section booking-section" id="booking">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fast &amp; Easy</span>
+          <h2 class="section-title">Book Your Tour</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">Fill out the quick form below to reserve your memorable journey with us.</p>
+        </div>
+
+        <div class="booking-wrapper">
+          <div class="booking-card">
+            
+            <!-- Dynamic Confirmation Notification -->
+            <div class="booking-alert hidden" id="bookingAlert">
+              <div class="alert-icon">&#10004;</div>
+              <div class="alert-content">
+                <h4 id="alertTitle">Booking Request Received!</h4>
+                <p id="alertMessage">Thank you for booking with India Tourism. Our representative will contact you within 24 hours.</p>
+              </div>
+            </div>
+
+            <form id="bookingForm" class="booking-form" novalidate>
+              
+              <div class="form-row">
+                <!-- Name Field -->
+                <div class="form-group">
+                  <label for="userName">Full Name <span class="required">*</span></label>
+                  <input type="text" id="userName" name="userName" placeholder="Enter your full name" required>
+                  <span class="error-text" id="nameError"></span>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                  <label for="userEmail">Email Address <span class="required">*</span></label>
+                  <input type="email" id="userEmail" name="userEmail" placeholder="e.g. yourname@example.com" required>
+                  <span class="error-text" id="emailError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <!-- Phone Field -->
+                <div class="form-group">
+                  <label for="userPhone">Phone Number <span class="required">*</span></label>
+                  <input type="tel" id="userPhone" name="userPhone" placeholder="e.g. 9876543210" required>
+                  <span class="error-text" id="phoneError"></span>
+                </div>
+
+                <!-- Destination Dropdown -->
+                <div class="form-group">
+                  <label for="destinationSelect">Select Destination <span class="required">*</span></label>
+                  <select id="destinationSelect" name="destinationSelect" required>
+                    <option value="" disabled selected>-- Choose a destination --</option>
+                    <option value="Taj Mahal">Taj Mahal (Agra)</option>
+                    <option value="Kerala Backwaters">Kerala Backwaters</option>
+                    <option value="Rajasthan">Rajasthan (Jaipur &amp; Udaipur)</option>
+                    <option value="Goa">Goa (Beaches &amp; Heritage)</option>
+                    <option value="Hill Stations">Himachal &amp; Uttarakhand Hill Stations</option>
+                    <option value="Varanasi & Cultural">Varanasi &amp; Cultural India</option>
+                  </select>
+                  <span class="error-text" id="destError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <!-- Travel Date -->
+                <div class="form-group">
+                  <label for="travelDate">Travel Date <span class="required">*</span></label>
+                  <input type="date" id="travelDate" name="travelDate" required>
+                  <span class="error-text" id="dateError"></span>
+                </div>
+
+                <!-- Number of Persons -->
+                <div class="form-group">
+                  <label for="numPersons">Number of Persons <span class="required">*</span></label>
+                  <input type="number" id="numPersons" name="numPersons" min="1" max="50" placeholder="1" value="1" required>
+                  <span class="error-text" id="personsError"></span>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                  <span>Confirm Booking</span> &#10148;
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. ABOUT US SECTION
+         ========================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-text-col">
+            <span class="section-tag">Who We Are</span>
+            <h2 class="section-title">About India Tourism</h2>
+            <div class="title-underline left"></div>
+            
+            <p class="about-paragraph">
+              Welcome to <strong>India Tourism</strong>, your premier gateway to discovering the extraordinary colors, sacred heritage, and timeless spirit of India. Founded with a deep passion for showcasing our motherland’s unparalleled diversity, we specialize in curating heartfelt, authentic travel experiences that bridge ancient history with modern comfort.
+            </p>
+            <p class="about-paragraph">
+              From the snow-crowned summits of the mighty Himalayas to the sun-drenched coastal palm groves of Kerala and Goa, our dedicated team of travel experts and certified local guides ensures every journey is safe, enriching, and unforgettable. Whether you are seeking cultural immersion, spiritual rejuvenation, or thrilling outdoor adventures, we are committed to making your Indian voyage truly incredible.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-number">15+</span>
+                <span class="highlight-label">Years of Service</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">50K+</span>
+                <span class="highlight-label">Happy Travelers</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">100+</span>
+                <span class="highlight-label">Curated Itineraries</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-image-col">
+            <div class="about-image-frame">
+              <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80" 
+                   alt="Ghats of Varanasi India" 
+                   class="about-img" 
+                   loading="lazy">
+              <div class="about-badge-card">
+                <span class="badge-icon">&#128508;</span>
+                <div>
+                  <strong>Atithi Devo Bhava</strong>
+                  <p>Guest is God</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. CONTACT SECTION
+         ========================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc">Have questions or need assistance planning your holiday? Reach out to our 24/7 support desk.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Item 1: Address -->
+          <div class="contact-card">
+            <div class="contact-icon" aria-hidden="true">&#128205;</div>
+            <h3 class="contact-label">Our Office Address</h3>
+            <p class="contact-value">
+              India Tourism Information Bureau<br>
+              88, Janpath Road, Connaught Place,<br>
+              New Delhi - 110001, India
+            </p>
+          </div>
+
+          <!-- Contact Item 2: Phone -->
+          <div class="contact-card">
+            <div class="contact-icon" aria-hidden="true">&#128222;</div>
+            <h3 class="contact-label">Phone Number</h3>
+            <p class="contact-value">
+              <a href="tel:+911123456789">+91 11 2345 6789</a><br>
+              <a href="tel:+919876543210">+91 98765 43210</a><br>
+              <span class="contact-note">Toll-Free: 1800-11-1363 (24x7)</span>
+            </p>
+          </div>
+
+          <!-- Contact Item 3: Email -->
+          <div class="contact-card">
+            <div class="contact-icon" aria-hidden="true">&#9993;</div>
+            <h3 class="contact-label">Email Support</h3>
+            <p class="contact-value">
+              <a href="mailto:info@indiatourism.gov.in">info@indiatourism.gov.in</a><br>
+              <a href="mailto:travel@indiatourism.com">travel@indiatourism.com</a><br>
+              <span class="contact-note">We respond within 2-4 hours</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       10. FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="footer-container container">
+      
+      <!-- Footer Brand & Description -->
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">
+          <span class="logo-text">India <span class="highlight">Tourism</span></span>
+        </a>
+        <p class="footer-text">Promoting the extraordinary heritage, culture, and scenic wonders of India across the globe.</p>
+      </div>
+
+      <!-- Social Media Links (Unicode / Clean Text Icons) -->
+      <div class="footer-social">
+        <span class="social-title">Follow Our Journey</span>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+            <span class="social-icon">&#128077;</span> Facebook
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            <span class="social-icon">&#128247;</span> Instagram
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+            <span class="social-icon">&#128038;</span> Twitter
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="footer-bottom">
+      <div class="container bottom-content">
+        <p class="copyright-text">&copy; 2025 India Tourism. All rights reserved.</p>
+        <p class="credits-text">Designed with <span class="heart-symbol">&#10084;</span> for Incredible India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
